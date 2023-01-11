@@ -44,7 +44,7 @@ body {
   z-index: -1;
 }
 
-.progess {
+.progress {
   background: var(--line-border-fill);
   position: absolute;
   top: 50%;
