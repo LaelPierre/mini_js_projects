@@ -18,3 +18,50 @@ body {
   display: grid;
   place-items: center;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+  width: 90vw;
+}
+
+.card {
+  position: relative;
+  flex: 0.5;
+  margin: 1rem;
+  border-radius: 2rem;
+}
+
+.card.active {
+  flex: 5;
+}
+
+.card.active h3 {
+  opacity: 1;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  text-transform: capitalize;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  border: 0.2rem solid black;
+  background: #fff;
+  opacity: 0;
+}
+
+.card:nth-of-type(4),
+.card:nth-of-type(5) {
+  display: none;
+}
+
+@media screen and (min-width: 580px) {
+  .card:nth-of-type(4),
+  .card:nth-of-type(5) {
+    display: block;
+  }
+}
