@@ -28,9 +28,12 @@ body {
 
 .card {
   position: relative;
+  background: center/cover no-repeat;
   flex: 0.5;
   margin: 1rem;
   border-radius: 2rem;
+  cursor: pointer;
+  transition: flex 0.7s ease-in;
 }
 
 .card.active {
@@ -52,6 +55,7 @@ body {
   border: 0.2rem solid black;
   background: #fff;
   opacity: 0;
+  transition: opacity 0.3s ease-in 0.2s;
 }
 
 .card:nth-of-type(4),
