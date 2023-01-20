@@ -7,9 +7,43 @@
 }
 
 body {
-  background: #f6f7fb;
+  background: linear-gradient(90deg, #7d5fff, #7158e2);
   font-family: "Muli", sans-serif;
   height: 100vh;
   display: grid;
   place-items: center;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container .search {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 0;
+  text-transform: capitalize;
+  width: 5rem;
+  height: 5rem;
+  transition: width 0.3s ease;
+}
+
+.search-container .btn {
+  position: absolute;
+  font-size: 2rem;
+  background: #fff;
+  border: 0;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.3s ease;
+}
+
+.search-container.active .search {
+  width: 300px;
+}
+
+.search-container.active .btn {
+  transform: translateX(298px);
 }
