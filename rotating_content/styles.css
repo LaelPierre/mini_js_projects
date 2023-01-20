@@ -10,4 +10,118 @@ body {
   background: #333;
   font-family: "Muli", sans-serif;
   height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  background: #fff;
+  position: relative;
+  transform-origin: top left;
+  transition: transform 0.4s ease-in;
+}
+
+.container.active {
+  transform: rotate(-20deg);
+}
+
+.rotating-circle {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  transition: transform 0.4s ease-in;
+}
+
+.container.active .rotating-circle {
+  transform: rotate(-70deg);
+}
+
+.rotating-circle .circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: purple;
+}
+
+.rotating-circle .circle .open {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.rotating-circle .circle .close {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.rotating-circle .circle .btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content {
+  margin: auto 2rem;
+  padding-top: 8rem;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content h3,
+.content small {
+  text-transform: capitalize;
+}
+
+.content small {
+  font-style: italic;
+}
+
+.content p {
+  margin: 1rem auto;
+}
+
+.content img {
+  margin-top: 1rem;
+}
+
+nav {
+  position: fixed;
+  bottom: 10rem;
+  left: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+nav ul li i {
+  margin-right: 0.5rem;
+}
+
+nav ul li {
+  margin-bottom: 2rem;
+}
+
+nav ul li + li {
+  margin-left: 20px;
+}
+
+nav ul li + li + li {
+  margin-left: 40px;
+}
+
+nav {
+  transform: translateX(-200px);
+  transition: transform 0.4s ease-in;
+}
+
+.container.active + nav {
+  transform: translateX(0);
 }
